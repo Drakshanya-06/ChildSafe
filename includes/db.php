@@ -1,10 +1,11 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = ''; // Default XAMPP password is empty
-$dbname = 'childsafe';
+$host = getenv('MYSQLHOST') ?: 'localhost';
+$user = getenv('MYSQLUSER') ?: 'root';
+$pass = getenv('MYSQLPASSWORD') ?: '';
+$dbname = getenv('MYSQLDATABASE') ?: 'childsafe';
+$port = getenv('MYSQLPORT') ?: 3306;
 
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli($host, $user, $pass, $dbname, $port);
 
 if ($conn->connect_error) {
     die("Database Connection Failed: " . $conn->connect_error);
