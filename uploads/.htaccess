@@ -1,0 +1,7 @@
+# Disable script execution in this directory for security
+RemoveHandler .php .phtml .php3 .php4 .php5 .php8 .py .pl .jsp .asp .aspx .cgi
+AddType text/plain .php .phtml .php3 .php4 .php5 .php8 .py .pl .jsp .asp .aspx .cgi
+php_flag engine off
+
+# Deny listing of directory contents
+Options -Indexes
