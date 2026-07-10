@@ -78,6 +78,12 @@ while($row = $res->fetch_assoc()) {
                 <a href="complaints.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
                     <i class="fa-solid fa-table-list w-6"></i> All Complaints
                 </a>
+                <a href="volunteers.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
+                    <i class="fa-solid fa-users w-6"></i> Volunteers
+                </a>
+                <a href="manage_admins.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
+                    <i class="fa-solid fa-user-shield w-6"></i> Manage Admins
+                </a>
             </nav>
             <div class="p-4 border-t border-gray-800">
                 <div class="flex items-center gap-3 mb-4">
