@@ -5,7 +5,9 @@ $pass = getenv('MYSQLPASSWORD') ?: '';
 $dbname = getenv('MYSQLDATABASE') ?: 'childsafe';
 $port = getenv('MYSQLPORT') ?: 3306;
 
-$conn = new mysqli($host, $user, $pass, $dbname, $port);
+$conn = mysqli_init();
+// Aiven requires SSL, so we use real_connect with the SSL flag
+$conn->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL);
 
 if ($conn->connect_error) {
     die("Database Connection Failed: " . $conn->connect_error);
