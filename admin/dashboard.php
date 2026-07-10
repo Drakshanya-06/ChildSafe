@@ -250,10 +250,17 @@ while($row = $res->fetch_assoc()) {
                 labels: <?php echo json_encode($labour_data['labels'] ?? []); ?>,
                 datasets: [{
                     data: <?php echo json_encode($labour_data['data'] ?? []); ?>,
-                    backgroundColor: ['#3b82f6', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6', '#64748b']
+                    backgroundColor: ['#b1d3b9', '#8fb89a', '#cce0d2', '#6b9376', '#e6f0e9', '#4d7558'],
+                    borderWidth: 0
                 }]
             },
-            options: { responsive: true, maintainAspectRatio: false }
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
         });
 
         // Risk Chart
@@ -266,16 +273,17 @@ while($row = $res->fetch_assoc()) {
                     label: 'Number of Cases',
                     data: <?php echo json_encode($risk_data['data'] ?? []); ?>,
                     backgroundColor: [
-                        'rgba(239, 68, 68, 0.7)',  // High Risk - Red
-                        'rgba(245, 158, 11, 0.7)', // Medium Risk - Amber
-                        'rgba(59, 130, 246, 0.7)'  // Low Risk - Blue
+                        'rgba(239, 68, 68, 0.6)',  // High Risk - Soft Red
+                        'rgba(245, 158, 11, 0.6)', // Medium Risk - Soft Amber
+                        'rgba(177, 211, 185, 0.8)'  // Low Risk - Theme Green
                     ],
                     borderColor: [
                         'rgb(239, 68, 68)',
                         'rgb(245, 158, 11)',
-                        'rgb(59, 130, 246)'
+                        'rgb(143, 184, 154)' // Darker Theme Green
                     ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    borderRadius: 4
                 }]
             },
             options: { 

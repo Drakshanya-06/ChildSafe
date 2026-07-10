@@ -57,7 +57,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #b1d3b9 0%, #e0ece3 100%);
+            background: 
+                linear-gradient(135deg, rgba(177, 211, 185, 0.85) 0%, rgba(224, 236, 227, 0.95) 100%),
+                url('images/child_labour_bg.png');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: multiply;
         }
     </style>
 </head>
