@@ -1,13 +1,16 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $host = getenv('MYSQLHOST') ?: 'localhost';
 $user = getenv('MYSQLUSER') ?: 'root';
 $pass = getenv('MYSQLPASSWORD') ?: '';
 $dbname = getenv('MYSQLDATABASE') ?: 'childsafe';
-$port = getenv('MYSQLPORT') ?: 3306;
+$port = (int) (getenv('MYSQLPORT') ?: 3306);
 
 $conn = mysqli_init();
-// Aiven requires SSL, so we use real_connect with the SSL flag
-$conn->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL);
+// Enable SSL but don't verify the certificate just in case Railway's server lacks the root CA
+$conn->real_connect($host, $user, $pass, $dbname, $port, NULL, MYSQLI_CLIENT_SSL | MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 
 if ($conn->connect_error) {
     die("Database Connection Failed: " . $conn->connect_error);
