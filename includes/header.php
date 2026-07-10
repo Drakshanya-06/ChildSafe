@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1d4ed8', // blue-700
+                        primary: '#b1d3b9', // pastel-green
                         secondary: '#f59e0b', // amber-500
                         accent: '#10b981', // emerald-500
                         danger: '#ef4444', // red-500

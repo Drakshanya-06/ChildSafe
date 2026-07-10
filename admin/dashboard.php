@@ -52,7 +52,7 @@ while($row = $res->fetch_assoc()) {
     <script>
         tailwind.config = {
             theme: {
-                extend: { colors: { primary: '#1d4ed8', secondary: '#f59e0b', danger: '#ef4444' } }
+                extend: { colors: { primary: '#b1d3b9', secondary: '#f59e0b', danger: '#ef4444' } }
             }
         }
     </script>
@@ -117,13 +117,13 @@ while($row = $res->fetch_assoc()) {
 
                 <!-- Stats Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                    <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-blue-500">
+                    <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-[#b1d3b9]">
                         <div class="flex justify-between items-start">
                             <div>
                                 <p class="text-sm font-medium text-gray-500 mb-1">Total Complaints</p>
                                 <h3 class="text-3xl font-bold text-gray-800"><?php echo $stats['total']; ?></h3>
                             </div>
-                            <div class="p-2 bg-blue-100 text-blue-600 rounded"><i class="fa-solid fa-file-lines"></i></div>
+                            <div class="p-2 bg-blue-100 text-[#b1d3b9] rounded"><i class="fa-solid fa-file-lines"></i></div>
                         </div>
                     </div>
                     <div class="bg-white rounded-lg shadow-sm p-6 border-l-4 border-yellow-500">

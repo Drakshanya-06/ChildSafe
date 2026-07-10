@@ -36,14 +36,14 @@ $complaint = $result->fetch_assoc();
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 text-white flex flex-col hidden md:flex">
             <div class="p-6 border-b border-gray-800 flex items-center gap-3">
-                <i class="fa-solid fa-hands-holding-child text-blue-600 text-3xl"></i>
+                <i class="fa-solid fa-hands-holding-child text-[#b1d3b9] text-3xl"></i>
                 <span class="text-xl font-bold">Admin Portal</span>
             </div>
             <nav class="flex-1 py-4">
                 <a href="dashboard.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
                     <i class="fa-solid fa-chart-line w-6"></i> Dashboard
                 </a>
-                <a href="complaints.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-blue-600">
+                <a href="complaints.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-[#b1d3b9]">
                     <i class="fa-solid fa-table-list w-6"></i> All Complaints
                 </a>
                 <a href="volunteers.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
@@ -63,7 +63,7 @@ $complaint = $result->fetch_assoc();
             
             <div class="mb-6 flex justify-between items-center">
                 <div>
-                    <a href="complaints.php" class="text-gray-500 hover:text-blue-600 mb-2 inline-block"><i class="fa-solid fa-arrow-left mr-1"></i> Back to Complaints</a>
+                    <a href="complaints.php" class="text-gray-500 hover:text-[#b1d3b9] mb-2 inline-block"><i class="fa-solid fa-arrow-left mr-1"></i> Back to Complaints</a>
                     <h1 class="text-2xl font-bold text-gray-800 flex items-center gap-3">
                         Complaint #<?php echo $complaint['complaint_id']; ?>
                         <span class="text-sm font-normal px-3 py-1 bg-gray-200 text-gray-700 rounded-full border border-gray-300"><?php echo $complaint['status']; ?></span>
@@ -85,7 +85,7 @@ $complaint = $result->fetch_assoc();
                             <div><p class="text-xs text-gray-500 font-bold uppercase">Labour Type</p><p class="text-gray-900"><?php echo $complaint['labour_type']; ?></p></div>
                             <div>
                                 <p class="text-xs text-gray-500 font-bold uppercase">Risk Assessment</p>
-                                <p class="<?php echo $complaint['risk_level'] == 'High Risk' ? 'text-red-600 font-bold' : ($complaint['risk_level'] == 'Medium Risk' ? 'text-orange-500 font-bold' : 'text-blue-600 font-bold'); ?>">
+                                <p class="<?php echo $complaint['risk_level'] == 'High Risk' ? 'text-red-600 font-bold' : ($complaint['risk_level'] == 'Medium Risk' ? 'text-orange-500 font-bold' : 'text-[#b1d3b9] font-bold'); ?>">
                                     <?php echo $complaint['risk_level']; ?>
                                 </p>
                             </div>
@@ -143,7 +143,7 @@ $complaint = $result->fetch_assoc();
                             <input type="hidden" name="complaint_id" value="<?php echo $complaint['complaint_id']; ?>">
                             <div class="mb-4">
                                 <label class="block text-sm font-medium text-gray-700 mb-1">New Status</label>
-                                <select name="status" class="w-full rounded border-gray-300 shadow-sm p-2 border focus:ring-blue-500 focus:border-blue-500">
+                                <select name="status" class="w-full rounded border-gray-300 shadow-sm p-2 border focus:ring-[#b1d3b9] focus:border-[#b1d3b9]">
                                     <option value="Pending" <?php if($complaint['status']=='Pending') echo 'selected'; ?>>Pending</option>
                                     <option value="Under Review" <?php if($complaint['status']=='Under Review') echo 'selected'; ?>>Under Review</option>
                                     <option value="Investigation Started" <?php if($complaint['status']=='Investigation Started') echo 'selected'; ?>>Investigation Started</option>
@@ -154,9 +154,9 @@ $complaint = $result->fetch_assoc();
                             </div>
                             <div class="mb-4">
                                 <label class="block text-sm font-medium text-gray-700 mb-1">Admin Remark</label>
-                                <textarea name="remark" rows="3" class="w-full rounded border-gray-300 shadow-sm p-2 border focus:ring-blue-500 focus:border-blue-500" placeholder="Add notes (visible to user)..."><?php echo htmlspecialchars($complaint['admin_remark'] ?? ''); ?></textarea>
+                                <textarea name="remark" rows="3" class="w-full rounded border-gray-300 shadow-sm p-2 border focus:ring-[#b1d3b9] focus:border-[#b1d3b9]" placeholder="Add notes (visible to user)..."><?php echo htmlspecialchars($complaint['admin_remark'] ?? ''); ?></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition">Update Record</button>
+                            <button type="submit" class="w-full bg-[#b1d3b9] text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition">Update Record</button>
                         </form>
                     </div>
 

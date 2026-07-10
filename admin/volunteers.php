@@ -34,7 +34,7 @@ $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 text-white flex flex-col hidden md:flex">
             <div class="p-6 border-b border-gray-800 flex items-center gap-3">
-                <i class="fa-solid fa-hands-holding-child text-blue-600 text-3xl"></i>
+                <i class="fa-solid fa-hands-holding-child text-[#b1d3b9] text-3xl"></i>
                 <span class="text-xl font-bold">Admin Portal</span>
             </div>
             <nav class="flex-1 py-4">
@@ -44,7 +44,7 @@ $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
                 <a href="complaints.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
                     <i class="fa-solid fa-table-list w-6"></i> All Complaints
                 </a>
-                <a href="volunteers.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-blue-600">
+                <a href="volunteers.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-[#b1d3b9]">
                     <i class="fa-solid fa-users w-6"></i> Volunteers
                 </a>
                 <a href="manage_admins.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
@@ -88,7 +88,7 @@ $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
                                     <?php echo htmlspecialchars($row['name']); ?>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    <a href="mailto:<?php echo htmlspecialchars($row['email']); ?>" class="text-blue-600 hover:underline"><?php echo htmlspecialchars($row['email']); ?></a>
+                                    <a href="mailto:<?php echo htmlspecialchars($row['email']); ?>" class="text-[#b1d3b9] hover:underline"><?php echo htmlspecialchars($row['email']); ?></a>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                     <?php echo htmlspecialchars($row['interest']); ?>

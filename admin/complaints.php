@@ -30,14 +30,14 @@ $complaints = $conn->query($query);
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 text-white flex flex-col hidden md:flex">
             <div class="p-6 border-b border-gray-800 flex items-center gap-3">
-                <i class="fa-solid fa-hands-holding-child text-blue-600 text-3xl"></i>
+                <i class="fa-solid fa-hands-holding-child text-[#b1d3b9] text-3xl"></i>
                 <span class="text-xl font-bold">Admin Portal</span>
             </div>
             <nav class="flex-1 py-4">
                 <a href="dashboard.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
                     <i class="fa-solid fa-chart-line w-6"></i> Dashboard
                 </a>
-                <a href="complaints.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-blue-600">
+                <a href="complaints.php" class="flex items-center px-6 py-3 bg-gray-800 text-white border-l-4 border-[#b1d3b9]">
                     <i class="fa-solid fa-table-list w-6"></i> All Complaints
                 </a>
                 <a href="volunteers.php" class="flex items-center px-6 py-3 text-gray-400 hover:bg-gray-800 hover:text-white transition border-l-4 border-transparent hover:border-gray-500">
@@ -60,11 +60,11 @@ $complaints = $conn->query($query);
 
             <!-- Filters -->
             <div class="bg-white rounded-lg shadow-sm p-4 mb-6 border border-gray-200 flex gap-4 overflow-x-auto">
-                <a href="complaints.php" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == '' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">All</a>
-                <a href="complaints.php?status=Pending" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Pending' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Pending</a>
-                <a href="complaints.php?status=Under Review" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Under Review' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Under Review</a>
-                <a href="complaints.php?status=Investigation Started" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Investigation Started' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Investigation</a>
-                <a href="complaints.php?status=Rescue Completed" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Rescue Completed' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Rescued</a>
+                <a href="complaints.php" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == '' ? 'bg-[#b1d3b9] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">All</a>
+                <a href="complaints.php?status=Pending" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Pending' ? 'bg-[#b1d3b9] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Pending</a>
+                <a href="complaints.php?status=Under Review" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Under Review' ? 'bg-[#b1d3b9] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Under Review</a>
+                <a href="complaints.php?status=Investigation Started" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Investigation Started' ? 'bg-[#b1d3b9] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Investigation</a>
+                <a href="complaints.php?status=Rescue Completed" class="px-4 py-2 rounded-md text-sm font-medium <?php echo $status_filter == 'Rescue Completed' ? 'bg-[#b1d3b9] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'; ?>">Rescued</a>
             </div>
 
             <!-- Table -->
@@ -112,7 +112,7 @@ $complaints = $conn->query($query);
                                     <?php echo $row['status']; ?>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="view_complaint.php?id=<?php echo $row['id']; ?>" class="text-blue-600 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 px-3 py-1 rounded transition border border-blue-200"><i class="fa-solid fa-folder-open mr-1"></i> Open</a>
+                                    <a href="view_complaint.php?id=<?php echo $row['id']; ?>" class="text-[#b1d3b9] hover:text-blue-900 bg-blue-50 hover:bg-blue-100 px-3 py-1 rounded transition border border-blue-200"><i class="fa-solid fa-folder-open mr-1"></i> Open</a>
                                 </td>
                             </tr>
                             <?php endwhile; ?>

@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { primary: '#1d4ed8', secondary: '#f59e0b', danger: '#ef4444' }
+                    colors: { primary: '#b1d3b9', secondary: '#f59e0b', danger: '#ef4444' }
                 }
             }
         }
