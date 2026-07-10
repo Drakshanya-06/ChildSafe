@@ -17,6 +17,9 @@
                         secondary: '#f59e0b', // amber-500
                         accent: '#10b981', // emerald-500
                         danger: '#ef4444', // red-500
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
                     }
                 }
             }
@@ -25,7 +28,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Leaflet CSS for Maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Custom CSS -->
